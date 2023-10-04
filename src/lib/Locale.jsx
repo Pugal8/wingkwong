@@ -1,3 +1,4 @@
+/*eslint-disable*/
 const defaultLocale = {
   landingHeaderText: '<questionLength> Questions',
   question: 'Question',
@@ -12,6 +13,7 @@ const defaultLocale = {
   singleSelectionTagText: 'Single Selection',
   multipleSelectionTagText: 'Multiple Selection',
   pickNumberOfSelection: 'Pick <numberOfSelection>',
+  restartButton:"RESTART",
 };
 
 export default defaultLocale;
