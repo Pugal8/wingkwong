@@ -5,6 +5,7 @@ import QuizResultFilter from './core-components/QuizResultFilter';
 import { checkAnswer, selectAnswer, rawMarkup } from './core-components/helpers';
 import InstantFeedback from './core-components/InstantFeedback';
 import Explanation from './core-components/Explanation';
+import ProgressBar from './core-components/ProgressBar';
 
 const Core = function ({
   questions, appLocale, showDefaultResult, onComplete, customResultPage,
@@ -313,6 +314,8 @@ const Core = function ({
           <div>
             {`${appLocale.question} ${(currentQuestionIndex + 1)} / ${questions.length}:`}
           </div>
+
+          <ProgressBar progress={currentQuestionIndex + 1} />
           <h3 dangerouslySetInnerHTML={rawMarkup(`${question && question.question} ${appLocale.marksOfQuestion.replace('<marks>', question.point)}`)} />
 
           {question && question.questionPic && <img src={question.questionPic} alt="image" />}
